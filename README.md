@@ -15,7 +15,7 @@ USAGE:
    Homepage: https://github.com/edwinhoksberg/docker-sync-hosts
 
 VERSION:
-    []
+   0.0.4 [b46e0057a57c7a6ff624796c661df123588b4739]
 
 AUTHOR:
    Edwin Hoksberg <mail@edwinhoksberg.nl>
