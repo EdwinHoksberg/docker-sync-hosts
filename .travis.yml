@@ -1,0 +1,25 @@
+language: go
+
+env:
+  global:
+    - PROGRAM=docker-sync-hosts
+  matrix:
+    - GIMME_OS=linux GIMME_ARCH=amd64 EXT=
+    - GIMME_OS=linux GIMME_ARCH=386 EXT=
+    - GIMME_OS=windows GIMME_ARCH=amd64 EXT=.exe
+    - GIMME_OS=windows GIMME_ARCH=386 EXT=.exe
+
+install:
+  - go get -v
+
+script:
+  - go build -v -ldflags "-s -w -X 'main.Name=${PROGRAM}' -X 'main.Version=${TRAVIS_TAG} [${TRAVIS_COMMIT}]'" -o ./bin/docker-sync-hosts_${GIMME_OS}_${GIMME_ARCH}${EXT}
+
+deploy:
+  provider: releases
+  api_key:
+    secure:
+  file: ./bin/docker-sync-hosts_${GIMME_OS}_${GIMME_ARCH}${EXT}
+  skip_cleanup: true
+  on:
+    tags: true

@@ -1,0 +1,10 @@
+[Unit]
+Description=docker-sync-hosts - A simple cli application to keep your hosts file up-to-date with running docker containers.
+After=docker.service
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/docker-sync-hosts daemon
+
+[Install]
+WantedBy=multi-user.target
