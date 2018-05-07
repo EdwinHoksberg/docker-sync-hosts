@@ -18,7 +18,7 @@ script:
 deploy:
   provider: releases
   api_key:
-    secure:
+    secure: nbo+ij34b3VbQep4WhD+iNmCX1cZNnwz0nJf7O2kpJg1fudTHOpAoW0GCo7UY+wMGPQa2Je9d5uTUYqnKMap3WFkzBiZYhFtK8Wd5rMaBkWkrchxczyoDAdmRUX0HWalnfxIXsH7flbFV1fXL3/js1xGvyP94fUUCGrb1pT5yEq7mB3xQiFdnHaLPFoAMZg7YVDvreLHY+vuu/qLmcZrvVvjwCIlrPuucUfn/P01IvP81jO4U8GkikcTW6Fwr+1k9KL7+/1Pfm9YOQ0W4bbSjYtiKpU95ofl1bqelmPeX9vHFHAN+BC0jJ/wHshPhn5oEZtPckPKE0+b5vKfFzBE49Z9Hj24leBKAZIFczzEnVpuN+LWOfKobTV1C3IRxvzbniCUkZpjMDGLSdDGL+zMAwIIqOqNDkIQMfyTcuJkfJSJmQow1py0Vtndgrd/bu+IhhTGQ9BZ89I13NAnWCh8alo6pyWVZfTo+1aPpYm20vF1n7ViywRCY/Cv8BY9iHzs12RrhL22gO+NesuGd6eqnrY38aN5cI55COAJkyF23X3FBo0NGRjoawZ/kWNxiF+IP+sM/LnZq9hny5w007Wbwu6FHgfCpK6jDKdMBQ1CSPGVpRv6gLQvc45/v2BPdzLjWjo2T0NX1GnQsrOZwnB2mK6ys6MIevygXWggWsac7dc=
   file: ./bin/docker-sync-hosts_${GIMME_OS}_${GIMME_ARCH}${EXT}
   skip_cleanup: true
   on:
